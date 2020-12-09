@@ -2,6 +2,6 @@
 var app = new Vue({
   el: "#root",
   data: {
-    headerLinks: ["HOME", "PAGES", "MENU", "EVENT", "BLOG", "LANDING"],
+    headerLinks: ["HOME", "PAGES", "MENU", "EVENT", "BLOG", "LANDING", "CART", "SEARCH"],
   }
 });

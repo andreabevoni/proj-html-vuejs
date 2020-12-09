@@ -145,3 +145,50 @@ header .next .arrow_text {
   left: 0;
   transform: translate(10%, -50%) rotate(-90deg);
 }
+
+/* REGOLE SEZIONE NEWS */
+.newsfeed {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+}
+.newsfeed .news {
+  width: calc((1600px - 30px) / 4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D2401E;
+  /* background a puntini */
+  background-image: radial-gradient(#FFA500 20%, transparent 20%);
+  background-size: 10px 10px;
+}
+
+.newsfeed .news img {
+  width: 100%;
+}
+
+.newsfeed .news .eye {
+  width: 80px;
+  display: none;
+}
+
+/* regole in hover */
+.newsfeed .news:hover {
+  cursor: pointer;
+}
+
+.newsfeed .news:hover img {
+  display: none;
+}
+
+.newsfeed .news:hover .eye {
+  display: block;
+}
+
+/* REGOLE RECENSIONI */
+.reviews {
+  /* debug */
+  height: 500px;
+  background-color: blue;
+}

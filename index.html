@@ -27,7 +27,6 @@
             </span>
           </div>
 
-
           <!-- link alla sinistra del logo -->
           <div class="box left">
             <span v-for="(link, index) in headerLinks">
@@ -37,7 +36,6 @@
               </a>
             </span>
           </div>
-
 
           <!-- logo centrale -->
           <img class="logo" :src="logo" alt="">
@@ -50,7 +48,6 @@
               </a>
             </span>
           </div>
-
 
           <!-- link in alto a destra (cart e search) -->
           <div class="box right">
@@ -65,7 +62,6 @@
               </a>
             </span>
           </div>
-
 
         </div>
 
@@ -89,8 +85,37 @@
       </header>
 
       <!-- sezione con 4 cards con comportamento on hover -->
+      <section class="newsfeed">
+
+        <!-- ognuna delle 4 immagini é contenuta in un div in modo da mantenere le dimensioni -->
+        <div class="news">
+          <!-- immagine -->
+          <img src="img/h3-img-1.jpg" alt="">
+          <!-- occhio che appare in hover -->
+          <img class="eye" src="svg/svg-2.svg" alt="">
+        </div>
+
+        <div class="news">
+          <img class="news" src="img/h3-img-2.jpg" alt="">
+          <img class="eye" src="svg/svg-2.svg" alt="">
+        </div>
+
+        <div class="news">
+          <img class="news" src="img/h3-img-3.jpg" alt="">
+          <img class="eye" src="svg/svg-2.svg" alt="">
+        </div>
+
+        <div class="news">
+          <img class="news" src="img/h3-img-4.jpg" alt="">
+          <img class="eye" src="svg/svg-2.svg" alt="">
+        </div>
+
+      </section>
 
       <!-- carousel con recensioni di riviste -->
+      <section class="reviews">
+
+      </section>
 
       <!-- sezione divisa in due con a sinistra una immagine e a destra il menú -->
 

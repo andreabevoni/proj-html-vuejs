@@ -14,27 +14,34 @@
       <!-- header con i vari link e con un jumbotron (sembra un carousel ma senza pallini in basso)-->
       <header>
 
-        <!-- pulsante ordina online -->
-        <!-- <div class="">
-          <a href="#">ORDER ONLINE</a>
-        </div> -->
+        <div class="link_row">
 
-        <!-- parte sinistra dei link -->
-        <div v-for="(link, index) in headerLinks">
-          <a v-if="index < 3" href="#">
-            <img class="symbol" v-if="index == 0" src="svg/svg-0.svg">{{link}}
-          </a>
+          <!-- pulsante ordina online -->
+          <div class="button">
+            <a class="white_text"href="#">ORDER ONLINE</a>
+          </div>
+
+          <!-- parte sinistra dei link -->
+          <div v-for="(link, index) in headerLinks">
+            <a class="white_text" v-if="index < 3" href="#">
+              <img class="symbol" v-if="index == 0" src="svg/svg-0.svg">
+              {{link}}
+            </a>
+          </div>
+
+          <!-- logo centrale -->
+          <img class="logo" src="img/h5-logo-divided-header.png" alt="">
+
+          <!-- parte destra dei link -->
+          <div v-for="(link, index) in headerLinks">
+            <a class="white_text" v-if="index >= 3" href="#">
+              <img class="symbol" v-if="index == 0" src="svg/svg-0.svg">{{link}}
+            </a>
+          </div>
+
         </div>
 
-        <!-- logo centrale -->
-        <img src="img/h5-logo-divided-header.png" alt="">
 
-        <!-- parte destra dei link -->
-        <div v-for="(link, index) in headerLinks">
-          <a v-if="index >= 3" href="#">
-            <img class="symbol" v-if="index == 0" src="svg/svg-0.svg">{{link}}
-          </a>
-        </div>
 
 
       </header>

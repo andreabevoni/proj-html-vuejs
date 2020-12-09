@@ -22,6 +22,7 @@ a {
 /* regole generali */
 header {
   height: 600px;
+  position: relative;
   background-color: #1B1B1B;
   background-image: url('../img/h3-rev-img-5.png');
   background-repeat: no-repeat;
@@ -99,26 +100,48 @@ header .link_row .fa-search {
 /* regole jumbotron */
 header .jumbotron {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-header .jumbotron .arrow {
+header .jumbotron img {
+  width: 300px;
+}
+
+/* regole frecce carousel */
+
+header .arrow {
   height: 100px;
   width: 100px;
+  position: absolute;
+  top: 50%;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
 
-header .jumbotron .arrow.prev {
-  transform: translate(-50%, 0);
+header .arrow.prev {
+  left: 0;
+  transform: translate(-70%, -50%);
 }
 
-header .jumbotron .arrow.next {
-  transform: translate(50%, 0);
+header .arrow.next {
+  right: 0;
+  transform: translate(70%, -50%);
 }
 
+header .arrow_text {
+  position: absolute;
+  top: 50%;
+  font-size: 12px;
+  color: #D2401E;
+}
 
-header .jumbotron img {
-  width: 300px;
+header .prev .arrow_text {
+  right: 0;
+  transform: translate(-10%, -50%) rotate(90deg);
+}
+
+header .next .arrow_text {
+  left: 0;
+  transform: translate(10%, -50%) rotate(-90deg);
 }

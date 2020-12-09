@@ -2,6 +2,7 @@
 var app = new Vue({
   el: "#root",
   data: {
-    headerLinks: ["HOME", "PAGES", "MENU", "EVENT", "BLOG", "LANDING", "CART", "SEARCH"],
+    logo: "img/h5-logo-divided-header.png",
+    headerLinks: ["ORDER ONLINE", "HOME", "PAGES", "MENU", "EVENT", "BLOG", "LANDING", "CART", "SEARCH"],
   }
 });

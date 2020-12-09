@@ -9,27 +9,57 @@
   </head>
   <body>
 
-    <!-- header con i vari link e con un jumbotron (sembra un carousel ma senza pallini in basso)-->
+    <div id="root">
 
-    <!-- sezione con 4 cards con comportamento on hover -->
+      <!-- header con i vari link e con un jumbotron (sembra un carousel ma senza pallini in basso)-->
+      <header>
 
-    <!-- carousel con recensioni di riviste -->
+        <!-- pulsante ordina online -->
+        <!-- <div class="">
+          <a href="#">ORDER ONLINE</a>
+        </div> -->
 
-    <!-- sezione divisa in due con a sinistra una immagine e a destra il menú -->
+        <!-- parte sinistra dei link -->
+        <div v-for="(link, index) in headerLinks">
+          <a v-if="index < 3" href="#">
+            <img class="symbol" v-if="index == 0" src="svg/svg-0.svg">{{link}}
+          </a>
+        </div>
 
-    <!-- sezione con un dettaglio grafico ed una scritta centrale -->
+        <!-- logo centrale -->
+        <img src="img/h5-logo-divided-header.png" alt="">
 
-    <!-- sezione con 4 foto di staff con comportamento on hover -->
+        <!-- parte destra dei link -->
+        <div v-for="(link, index) in headerLinks">
+          <a v-if="index >= 3" href="#">
+            <img class="symbol" v-if="index == 0" src="svg/svg-0.svg">{{link}}
+          </a>
+        </div>
 
-    <!-- sezione con loghi di locali affiliati (o sponsor) -->
 
-    <!-- sezione con l'elenco di pizze in orizzontale (quelle esterne sono tagliate ma non vedo barre quindi immagino ci sia un hoverflow hidden) -->
+      </header>
 
-    <!-- sezione divisa in due con a sinistra alcuni eventi e a destra un fumetto -->
+      <!-- sezione con 4 cards con comportamento on hover -->
 
-    <!-- sezione con per prenotazione con vari input -->
+      <!-- carousel con recensioni di riviste -->
 
-    <!-- footer con i vari link a sinistra e con una immagine a destra -->
+      <!-- sezione divisa in due con a sinistra una immagine e a destra il menú -->
+
+      <!-- sezione con un dettaglio grafico ed una scritta centrale -->
+
+      <!-- sezione con 4 foto di staff con comportamento on hover -->
+
+      <!-- sezione con loghi di locali affiliati (o sponsor) -->
+
+      <!-- sezione con l'elenco di pizze in orizzontale (quelle esterne sono tagliate ma non vedo barre quindi immagino ci sia un hoverflow hidden) -->
+
+      <!-- sezione divisa in due con a sinistra alcuni eventi e a destra un fumetto -->
+
+      <!-- sezione con per prenotazione con vari input -->
+
+      <!-- footer con i vari link a sinistra e con una immagine a destra -->
+
+    </div>
 
     <script type="text/javascript" src="js/script.js"></script>
 

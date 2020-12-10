@@ -67,6 +67,20 @@ a {
   bottom: 30px;
 }
 
+.pizza.circle {
+  padding: 10px 12px;
+  border-radius: 50%;
+}
+
+.pizza.circle.white {
+  background-color: #FFFFFF;
+}
+
+.pizza.circle.grey {
+  background-color: #CDCDCD;
+}
+
+
 /* REGOLE HEADER */
 /* regole generali */
 header {
@@ -310,4 +324,90 @@ header .jumbotron img {
 
 .menu .right .combo .description {
   font-size: 12px;
+}
+
+/* REGOLE SEZIONE BUILD */
+.build {
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.build .slogan {
+  width: 300px;
+  margin-left: 200px;
+  font-size: 45px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+/* regole per lo sfondo particolare */
+.build .bg {
+  background-image: url(../img/h3-background-img.jpg);
+  background-size: 1500px;
+}
+
+.build .top,
+.build .bottom {
+  height: 25%;
+}
+
+.build .middle {
+  height: 50%;
+}
+
+.build .left,
+.build .right {
+  width: 10%;
+}
+
+.build .center {
+  width: 80%;
+}
+
+.build .top.left {
+  background-position: right bottom;
+}
+
+.build .middle.left {
+  background-position: right top;
+}
+
+.build .bottom.left {
+  background-position: right;
+}
+
+.build .top.center {
+  background-position: bottom;
+}
+
+.build .middle.center {
+  display: flex;
+  align-items: center;
+  background-position: top;
+}
+
+.build .bottom.center {
+  background-position: center;
+}
+
+.build .top.right {
+  background-position: left bottom;
+}
+
+.build .middle.right {
+  position: relative;
+  background-position: left top;
+}
+
+.build .bottom.right {
+  background-position: left;
+}
+
+/* REGOLE SEZIONE STAFF */
+.staff {
+  margin: 10px 0;
+  /* debug */
+  height: 500px;
+  background-color: red;
 }

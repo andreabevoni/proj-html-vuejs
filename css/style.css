@@ -466,3 +466,16 @@ header .jumbotron img {
 .team .employee i:hover {
   cursor: pointer;
 }
+
+/* REGOLE SEZIONE AFFILIATE */
+.affiliate {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E4E4D4;
+}
+
+.affiliate img {
+  width: 200px;
+}

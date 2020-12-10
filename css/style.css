@@ -19,6 +19,10 @@ a {
   margin: auto;
 }
 
+.half {
+  width: calc(100% / 2);
+}
+
 /* frecce carousel */
 .arrow {
   height: 100px;
@@ -262,10 +266,6 @@ header .jumbotron img {
   height: 600px;
   display: flex;
   align-items: center;
-}
-
-.offers .half {
-  width: calc(100% / 2);
 }
 
 /* parte sinistra con le immagini */
@@ -565,7 +565,7 @@ header .jumbotron img {
 .menu .menu_bottom .icon {
   padding: 5px;
   position: absolute;
-  bottom: 5px;
+  bottom: 0;
   right: 0;
   display: flex;
   justify-content: center;
@@ -583,9 +583,48 @@ header .jumbotron img {
 
 /* REGOLE SEZIONE EVENTS */
 .events {
-  /* debug */
-  height: 200px;
-  background-color: blue;
+  padding: 10px 0;
+  display: flex;
+  background-color: #FFFFFF;
+}
+
+/* regole parte sinistra */
+.events .left {
+  height: 700px;
+  background-color: #1B1B1B;
+}
+
+/* regole parte destra */
+.events .right {
+  height: 800px;
+  background-image: url(../img/h3-img-5a.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.events .right .top {
+  height: 100px;
+  position: relative;
+}
+
+.events .right .top .icon {
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+
+.events .right .top .icon img {
+  height: 20px;
+}
+
+.events .right .middle {
+  height: 600px;
+  position: relative;
 }
 
 /* REGOLE SEZIONE BOOK */

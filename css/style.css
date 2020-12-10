@@ -591,7 +591,67 @@ header .jumbotron img {
 /* regole parte sinistra */
 .events .left {
   height: 700px;
+  padding-left: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #1B1B1B;
+}
+
+.events .left .subtitle {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #AB4027;
+}
+
+.events .left .title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.events .left .event {
+  width: 400px;
+  padding: 25px 0;
+  display: flex;
+}
+
+.events .left .event:nth-child(4) {
+  border-top: 2px dotted #B7903C;
+  border-bottom: 2px dotted #B7903C;
+}
+
+.events .left .event .date {
+  margin-right: 20px;
+  text-align: center;
+}
+
+.events .left .event .date .day {
+  font-size: 40px;
+  font-weight: bold;
+  color: #AB4027;
+}
+
+.events .left .event .date .month {
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.events .left .event .place {
+  margin-top: 10px;
+}
+
+.events .left .event .name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.events .left .event .address {
+  font-size: 12px;
+  color: #AB4027;
 }
 
 /* regole parte destra */

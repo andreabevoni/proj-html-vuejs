@@ -60,24 +60,24 @@ a {
   cursor: pointer;
 }
 
-/* pizza */
-.pizza {
+/* slice */
+.slice {
   position: absolute;
   right: 30px;
   bottom: 30px;
 }
 
-.pizza.circle {
+.slice.circle {
   padding: 10px 12px;
   border-radius: 50%;
 }
 
-.pizza.circle.white {
+.slice.circle.white {
   background-color: #FFFFFF;
 }
 
-.pizza.circle.grey {
-  background-color: #CDCDCD;
+.slice.circle.grey {
+  background-color: #E4E4D4;
 }
 
 
@@ -256,20 +256,20 @@ header .jumbotron img {
   color: #B7903C;
 }
 
-/* REGOLE MENU */
-.menu {
+/* REGOLE OFFERS */
+.offers {
   margin: 10px 0;
   height: 600px;
   display: flex;
   align-items: center;
 }
 
-.menu .half {
+.offers .half {
   width: calc(100% / 2);
 }
 
 /* parte sinistra con le immagini */
-.menu .left {
+.offers .left {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -279,12 +279,12 @@ header .jumbotron img {
   background-position: center;
 }
 
-.menu .left img {
+.offers .left img {
   height: 300px;
 }
 
-/* parte destra con l'effettivo menu */
-.menu .right {
+/* parte destra con le effettive offerte */
+.offers .right {
   height: 75%;
   display: flex;
   flex-direction: column;
@@ -293,37 +293,37 @@ header .jumbotron img {
   position: relative;
 }
 
-.menu .right .title {
+.offers .right .title {
   margin-bottom: 10px;
   font-size: 30px;
   font-weight: bold;
 }
 
-.menu .right .subtitle {
+.offers .right .subtitle {
   width: 300px;
   font-size: 16px;
 }
 
-.menu .right .combo {
+.offers .right .combo {
   width: 300px;
   margin-top: 20px;
   display: flex;
 }
 
-.menu .right .combo .price {
+.offers .right .combo .price {
   margin-right: 10px;
   font-size: 20px;
   font-weight: bold;
   color: #AB4027;
 }
 
-.menu .right .combo .name {
+.offers .right .combo .name {
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.menu .right .combo .description {
+.offers .right .combo .description {
   font-size: 12px;
 }
 
@@ -478,4 +478,126 @@ header .jumbotron img {
 
 .affiliate img {
   width: 200px;
+}
+
+/* REGOLE SEZIONE MENU */
+.menu {
+  background-color: #FFFFFF;
+}
+
+/* regole parte superiore */
+.menu .menu_top {
+  height: 250px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.menu .menu_top .choose {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #D2401E;
+}
+
+.menu .menu_top .title {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.menu .menu_top .description {
+  width: 400px;
+  font-size: 14px;
+}
+
+/* regole parte inferiore */
+.menu .menu_bottom {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu .menu_bottom .pizza {
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.menu .menu_bottom .pizza img {
+  margin: 0 50px 5px;
+  height: 200px;
+}
+
+.menu .menu_bottom .pizza .name {
+  color: #B7903C;
+}
+
+.menu .menu_bottom .pizza .discount {
+  margin-right: 5px;
+  text-decoration: line-through;
+  color: #CDCDCD;
+}
+
+.menu .menu_bottom .pizza .price {
+  color: #D2401E;
+}
+
+.menu .menu_bottom .pizza .sold {
+  padding: 12px 10px;
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: normal;
+  color: #FFFFFF;
+  background-color: #D2401E;
+}
+
+/* simbolo in basso a destra */
+.menu .menu_bottom .icon {
+  padding: 5px;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EF2853;
+}
+
+.menu .menu_bottom img {
+  height: 20px;
+}
+
+.menu .menu_bottom .icon:hover {
+  cursor: pointer;
+}
+
+/* REGOLE SEZIONE EVENTS */
+.events {
+  /* debug */
+  height: 200px;
+  background-color: blue;
+}
+
+/* REGOLE SEZIONE BOOK */
+.book {
+  /* debug */
+  height: 200px;
+  background-color: green;
+}
+
+/* REGOLE FOOTER */
+footer {
+  /* debug */
+  height: 200px;
+  background-color: black;
 }

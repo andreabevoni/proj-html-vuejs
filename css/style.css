@@ -761,18 +761,101 @@ header .jumbotron img {
 
 /* REGOLE FOOTER */
 footer {
-  height: 600px;
+  height: 500px;
   margin-top: 10px;
   display: flex;
 }
 
+/* regole parte sinistra */
 footer .left {
-  height: 100%;
+  padding: 100px 50px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #1B1B1B;
 }
 
+footer .left .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .left .row:last-child {
+  align-items: baseline;
+}
+
+footer .left .column {
+  width: 200px;
+}
+
+footer .left .title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #B7903C;
+}
+
+footer .left .address {
+  font-size: 12px;
+  color: #CDCDCD;
+}
+
+footer .left .margin {
+  margin-top: 10px;
+}
+
+footer .left .day {
+  font-size: 12px;
+}
+
+footer .left .day.gold {
+  font-weight: bold;
+  color: #B7903C;
+}
+
+footer .left .day.red {
+  color: #AB4027;
+}
+
+footer .left .day.white {
+  color: #CDCDCD;
+}
+
+footer .left .day .asterisk {
+  color: #AB4027;
+}
+
+footer .left i {
+  margin: 40px 0 0 10px;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+footer .slogan {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+footer .credits {
+  font-size: 12px;
+}
+
+footer .credits .gold {
+  color: #B7903C;
+}
+
+footer .credits .green {
+  color: #339966;
+}
+
+footer .logo {
+  width: 150px;
+}
+
+/* regole parte destra */
 footer .right {
   position: relative;
   background-image: url(../img/footer-img-1.jpg);
   background-size: cover;
+  background-position: center;
 }

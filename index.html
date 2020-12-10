@@ -494,8 +494,54 @@
       <!-- footer con i vari link a sinistra e con una immagine a destra -->
       <footer>
 
-        <!-- parte di sinistra con le informazioni-->
+        <!-- parte di sinistra con le informazioni inserite tramite Vue-->
         <div class="half left">
+
+          <!-- riga superiore -->
+          <div class="row">
+            <!-- colonna con gli indirizzi dei ristoranti -->
+            <div class="column">
+              <div class="title">{{restaurants.name}}</div>
+              <div v-for="place in restaurants.list">
+                <div class="address margin">{{place.address}}</div>
+                <div class="address">{{place.city}}</div>
+                <div class="address">{{place.phone}}</div>
+              </div>
+            </div>
+
+            <!-- colonna con gli orari di apertura -->
+            <div class="column">
+              <div class="title">{{openingHours.name}}</div>
+              <div v-for="working in openingHours.list">
+                <div class="day gold margin">
+                  {{working.day}}
+                  <span v-if="working.asterisk" class="asterisk">*</span>
+                </div>
+                <div class="day" :class="working.color">{{working.opening}}</div>
+              </div>
+              <span class="day gold">{{socials.name}}</span>
+              <i v-for="social in socials.list" :class="social"></i>
+            </div>
+
+            <!-- colonna con lo slogan aziendale -->
+            <div class="column">
+              <div class="slogan">{{motto}}</div>
+            </div>
+          </div>
+
+          <!-- riga inferiore -->
+          <div class="row">
+
+            <!-- credits -->
+            <div class="credits">
+              <span class="gold" v-html="credits.firstPart"></span>
+              <span class="green">{{credits.secondPart}}</span>
+            </div>
+
+            <!-- logo -->
+            <img class="logo" :src="logo" alt="">
+
+          </div>
 
         </div>
 

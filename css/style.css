@@ -179,6 +179,7 @@ header .jumbotron img {
   justify-content: space-between;
   background-color: #FFFFFF;
 }
+
 .newsfeed .news {
   width: calc((1600px - 30px) / 4);
   display: flex;
@@ -200,16 +201,16 @@ header .jumbotron img {
 }
 
 /* regole in hover */
-.newsfeed .news:hover {
-  cursor: pointer;
-}
-
 .newsfeed .news:hover img {
   display: none;
 }
 
 .newsfeed .news:hover .eye {
   display: block;
+}
+
+.newsfeed .news .eye:hover {
+  cursor: pointer;
 }
 
 /* REGOLE TESTIMONIAL */
@@ -404,10 +405,64 @@ header .jumbotron img {
   background-position: left;
 }
 
-/* REGOLE SEZIONE STAFF */
-.staff {
+/* REGOLE SEZIONE TEAM */
+.team {
   margin: 10px 0;
-  /* debug */
-  height: 500px;
-  background-color: red;
+  display: flex;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+.team .employee {
+  width: calc(1600px / 4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  /* background a puntini */
+  background-image: radial-gradient(#FFA500 20%, transparent 20%);
+  background-size: 10px 10px;
+}
+
+.team .employee img {
+  width: 100%;
+}
+
+.team .employee .curriculum {
+  height: 340px;
+  width: 340px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  background-color: #D2401E;
+}
+
+.team .employee .curriculum .name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.team .employee .curriculum .job {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.team .employee .curriculum i {
+  margin: 0 5px;
+  font-size: 14px;
+}
+
+/* regole in hover */
+.team .employee:hover img {
+  display: none;
+}
+
+.team .employee:hover .curriculum {
+  display: flex;
+}
+
+.team .employee i:hover {
+  cursor: pointer;
 }

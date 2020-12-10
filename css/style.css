@@ -222,6 +222,7 @@ header .jumbotron img {
   margin-bottom: 10px;
   text-align: center;
   font-size: 20px;
+  font-weight: bold;
   color: #303030;
 }
 
@@ -243,7 +244,70 @@ header .jumbotron img {
 /* REGOLE MENU */
 .menu {
   margin: 10px 0;
-  /* debug */
-  background-color: blue;
-  height: 200px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.menu .half {
+  width: calc(100% / 2);
+}
+
+/* parte sinistra con le immagini */
+.menu .left {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/h1-img-4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.menu .left img {
+  height: 300px;
+}
+
+/* parte destra con l'effettivo menu */
+.menu .right {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.menu .right .title {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.menu .right .subtitle {
+  width: 300px;
+  font-size: 16px;
+}
+
+.menu .right .combo {
+  width: 300px;
+  margin-top: 20px;
+  display: flex;
+}
+
+.menu .right .combo .price {
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #AB4027;
+}
+
+.menu .right .combo .name {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu .right .combo .description {
+  font-size: 12px;
 }

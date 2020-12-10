@@ -689,9 +689,74 @@ header .jumbotron img {
 
 /* REGOLE SEZIONE BOOK */
 .book {
-  /* debug */
   height: 200px;
-  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(../img/h3-background-img-3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.book .line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* aggiungo margine solo alla prima linea per centrarla con il flex column. il margine aggiunto dovrebbe essere circa pari alla dimensione della seconda linea (14px font + 5 margine top + altro margine intrinseco del font) */
+.book .line:first-child {
+  margin-top: 20px;
+}
+
+.book .divisor {
+  width: 250px;
+  display: flex;
+  align-items: center;
+}
+
+.book .divisor .conjunction {
+  width: 50px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.book .divisor .box {
+  height: 50px;
+  width: 200px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid #1F1F1F;
+}
+
+.book .divisor .box input {
+  border: none;
+}
+
+.book .divisor .box i {
+  font-size: 14px;
+  color: #B7903C;
+}
+
+.book button {
+  height: 50px;
+  width: 200px;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-color: #D2401E;
+  border: none;
+}
+
+.book .credits {
+  width: 1000px;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #FFFFFF;
 }
 
 /* REGOLE FOOTER */

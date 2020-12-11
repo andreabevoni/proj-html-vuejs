@@ -10,10 +10,6 @@ a {
   text-decoration: none;
 }
 
-.white_text {
-  color: #FFFFFF;
-}
-
 #root {
   width: 1600px;
   margin: auto;
@@ -21,6 +17,64 @@ a {
 
 .half {
   width: calc(100% / 2);
+}
+
+/* dimensioni font */
+.px50 {
+  font-size: 50px;
+}
+
+.px40 {
+  font-size: 40px;
+}
+
+.px30 {
+  font-size: 30px;
+}
+
+.px20 {
+  font-size: 20px;
+}
+
+.px14 {
+  font-size: 14px;
+}
+
+.px12 {
+  font-size: 12px;
+}
+
+.px10{
+  font-size: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* colori font */
+.lightgrey {
+  color: #E4E4D4;
+}
+
+.gold {
+  color: #B7903C;
+}
+
+.green {
+  color: #339966;
+}
+
+.grey {
+  color: #CDCDCD;
+}
+
+.red {
+  color: #AB4027;
+}
+
+.white {
+  color: #FFFFFF;
 }
 
 /* frecce carousel */
@@ -46,8 +100,6 @@ a {
 .arrow_text {
   position: absolute;
   top: 50%;
-  font-size: 14px;
-  color: #D2401E;
 }
 
 .prev .arrow_text {
@@ -84,7 +136,6 @@ a {
   background-color: #E4E4D4;
 }
 
-
 /* REGOLE HEADER */
 /* regole generali */
 header {
@@ -108,6 +159,7 @@ header.thirdbg {
   background-image: url('../img/h3-rev-img-5.png');
 }
 
+/* link */
 header .link_row {
   display: flex;
   justify-content: center;
@@ -126,9 +178,8 @@ header .link_row .box.right {
   text-align: left;
 }
 
-header .link_row .white_text{
+header .link_row a {
   margin: 0 20px;
-  font-size: 12px;
 }
 
 header .link_row .symbol {
@@ -137,13 +188,13 @@ header .link_row .symbol {
   filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(322deg) brightness(105%) contrast(101%);
 }
 
-/* regole pulsante a sx */
-header .link_row .button{
+/* pulsante a sx */
+header .link_row .button {
   padding: 10px 30px;
   background-color: #D2401E;
 }
 
-/* regole logo */
+/* logo */
 header .link_row .logo {
   margin: 20px;
   width: 150px;
@@ -169,8 +220,6 @@ header .link_row .backpack {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 10px;
-  color: #D2401E;
 }
 
 header .link_row .fa-search {
@@ -215,10 +264,8 @@ header .jumbotron img {
 
 .newsfeed .news .fa-eye {
   padding: 30px;
-  font-size: 20px;
   display: none;
   border-radius: 50%;
-  color: #FFFFFF;
   background-color: #D2401E;
 }
 
@@ -229,6 +276,10 @@ header .jumbotron img {
 
 .newsfeed .news:hover .fa-eye {
   display: block;
+}
+
+.newsfeed .news .fa-eye:hover {
+  cursor: pointer;
 }
 
 /* REGOLE TESTIMONIAL */
@@ -245,34 +296,21 @@ header .jumbotron img {
 }
 
 .testimonials .fa-quote-left {
-  font-size: 50px;
   margin-bottom: 20px;
-  color: #B7903C;
 }
 
 .testimonials .quote {
   width: 600px;
   margin-bottom: 10px;
   text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  color: #303030;
 }
 
 .testimonials .journal {
   margin-bottom: 20px;
-  font-size: 12px;
-  color: #D2401E;
 }
 
 .testimonials .fa-circle {
   margin: 0 3px;
-  font-size: 8px;
-  color: #E4E4D4;
-}
-
-.testimonials .fa-circle.active {
-  color: #B7903C;
 }
 
 .testimonials .fa-circle:hover {
@@ -312,38 +350,25 @@ header .jumbotron img {
   position: relative;
 }
 
-.offers .right .title {
-  margin-bottom: 10px;
-  font-size: 30px;
-  font-weight: bold;
+.offers .right > div {
+  width: 300px;
 }
 
-.offers .right .subtitle {
-  width: 300px;
-  font-size: 16px;
+.offers .right .title {
+  margin-bottom: 10px;
 }
 
 .offers .right .combo {
-  width: 300px;
   margin-top: 20px;
   display: flex;
 }
 
 .offers .right .combo .price {
   margin-right: 10px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #AB4027;
-}
-
-.offers .right .combo .name {
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-weight: bold;
 }
 
 .offers .right .combo .description {
-  font-size: 12px;
+  margin: 10px 0 0 1px;
 }
 
 /* REGOLE SEZIONE BUILD */
@@ -356,9 +381,6 @@ header .jumbotron img {
 .build .slogan {
   width: 300px;
   margin-left: 200px;
-  font-size: 45px;
-  font-weight: bold;
-  color: #FFFFFF;
 }
 
 /* regole per lo sfondo particolare */
@@ -456,23 +478,15 @@ header .jumbotron img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #FFFFFF;
   background-color: #D2401E;
-}
-
-.team .employee .curriculum .name {
-  font-size: 20px;
-  font-weight: bold;
 }
 
 .team .employee .curriculum .job {
   margin-bottom: 10px;
-  font-size: 14px;
 }
 
 .team .employee .curriculum i {
   margin: 0 5px;
-  font-size: 14px;
 }
 
 /* regole in hover */
@@ -517,21 +531,12 @@ header .jumbotron img {
   position: relative;
 }
 
-.menu .menu_top .choose {
-  margin-bottom: 10px;
-  font-size: 12px;
-  color: #D2401E;
-}
-
 .menu .menu_top .title {
-  margin-bottom: 10px;
-  font-size: 30px;
-  font-weight: bold;
+  margin: 10px 0;
 }
 
 .menu .menu_top .description {
   width: 400px;
-  font-size: 14px;
 }
 
 /* regole parte inferiore */
@@ -547,8 +552,6 @@ header .jumbotron img {
 
 .menu .menu_bottom .pizza {
   position: relative;
-  font-size: 14px;
-  font-weight: bold;
 }
 
 .menu .menu_bottom .pizza img {
@@ -556,18 +559,9 @@ header .jumbotron img {
   height: 200px;
 }
 
-.menu .menu_bottom .pizza .name {
-  color: #B7903C;
-}
-
-.menu .menu_bottom .pizza .discount {
+.menu .menu_bottom .pizza .grey {
   margin-right: 5px;
   text-decoration: line-through;
-  color: #CDCDCD;
-}
-
-.menu .menu_bottom .pizza .price {
-  color: #D2401E;
 }
 
 .menu .menu_bottom .pizza .sold {
@@ -621,14 +615,6 @@ header .jumbotron img {
 
 .events .left .subtitle {
   margin-bottom: 10px;
-  font-size: 12px;
-  color: #AB4027;
-}
-
-.events .left .title {
-  font-size: 30px;
-  font-weight: bold;
-  color: #FFFFFF;
 }
 
 .events .left .event {
@@ -647,32 +633,12 @@ header .jumbotron img {
   text-align: center;
 }
 
-.events .left .event .date .day {
-  font-size: 40px;
-  font-weight: bold;
-  color: #AB4027;
-}
-
 .events .left .event .date .month {
   margin-top: -10px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #FFFFFF;
 }
 
 .events .left .event .place {
   margin-top: 10px;
-}
-
-.events .left .event .name {
-  font-size: 20px;
-  font-weight: bold;
-  color: #FFFFFF;
-}
-
-.events .left .event .address {
-  font-size: 12px;
-  color: #AB4027;
 }
 
 /* regole parte destra */
@@ -701,6 +667,10 @@ header .jumbotron img {
 
 .events .right .top .icon img {
   height: 20px;
+}
+
+.events .right .top .icon:hover {
+  cursor: pointer;
 }
 
 .events .right .middle {
@@ -739,9 +709,6 @@ header .jumbotron img {
 .book .divisor .conjunction {
   width: 50px;
   text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  color: #FFFFFF;
 }
 
 .book .divisor .box {
@@ -759,25 +726,20 @@ header .jumbotron img {
   border: none;
 }
 
-.book .divisor .box i {
-  font-size: 14px;
-  color: #B7903C;
-}
-
 .book button {
   height: 50px;
   width: 200px;
-  font-size: 12px;
-  color: #FFFFFF;
   background-color: #D2401E;
   border: none;
+}
+
+.book button:hover {
+  cursor: pointer;
 }
 
 .book .credits {
   width: 1000px;
   margin-top: 5px;
-  font-size: 14px;
-  color: #FFFFFF;
 }
 
 /* REGOLE FOOTER */
@@ -809,64 +771,16 @@ footer .left .column {
   width: 200px;
 }
 
-footer .left .title {
-  font-size: 14px;
-  font-weight: bold;
-  color: #B7903C;
-}
-
-footer .left .address {
-  font-size: 12px;
-  color: #CDCDCD;
-}
-
 footer .left .margin {
   margin-top: 10px;
 }
 
-footer .left .day {
-  font-size: 12px;
-}
-
-footer .left .day.gold {
-  font-weight: bold;
-  color: #B7903C;
-}
-
-footer .left .day.red {
-  color: #AB4027;
-}
-
-footer .left .day.white {
-  color: #CDCDCD;
-}
-
-footer .left .day .asterisk {
-  color: #AB4027;
-}
-
 footer .left i {
   margin: 40px 0 0 10px;
-  font-size: 12px;
-  color: #FFFFFF;
 }
 
-footer .slogan {
-  font-size: 20px;
-  font-weight: bold;
-  color: #FFFFFF;
-}
-
-footer .credits {
-  font-size: 12px;
-}
-
-footer .credits .gold {
-  color: #B7903C;
-}
-
-footer .credits .green {
-  color: #339966;
+footer .left i:hover {
+  cursor: pointer;
 }
 
 footer .logo {

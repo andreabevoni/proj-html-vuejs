@@ -21,7 +21,7 @@
 
           <!-- pulsante ordina online -->
           <div class="box left">
-            <a class="white_text button" :href="headerLinks[0].link">
+            <a class="button px12 white" :href="headerLinks[0].link">
               {{headerLinks[0].name}}
             </a>
           </div>
@@ -30,7 +30,7 @@
           <div class="box left">
             <span v-for="(link, index) in headerLinks">
               <!-- stampo solo Home, Pages e Menu -->
-              <a class="white_text" v-if="index >= 1 && index < 4" :href="link.link">
+              <a class="px12 white" v-if="index >= 1 && index < 4" :href="link.link">
                 <img class="symbol" v-if="link.symbol" :src="link.symbol">
                 {{link.name}}
               </a>
@@ -44,7 +44,7 @@
           <div class="box right">
             <span v-for="(link, index) in headerLinks">
               <!-- stampo solo Event, Blog e Landing -->
-              <a class="white_text" v-if="index >= 4 && index < 7" :href="link.link">
+              <a class="px12 white" v-if="index >= 4 && index < 7" :href="link.link">
                 <img class="symbol" v-if="link.symbol" :src="link.symbol">
                 {{link.name}}
               </a>
@@ -54,10 +54,10 @@
           <!-- link in alto a destra (cart e search) -->
           <div class="box right">
             <span v-for="(link, index) in headerLinks">
-              <a class="white_text" v-if="index >= 7" :href="link.link">
+              <a class="px12 white" v-if="index >= 7" :href="link.link">
                 <span class="position" v-if="link.symbol == 'svg/svg-1.svg'">
                   <img class="symbol bike" :src="link.symbol">
-                  <div class="backpack">{{cart}}</div>
+                  <div class="backpack px10 red">{{cart}}</div>
                 </span>
                 <i v-else :class="link.symbol"></i>
                 {{link.name}}
@@ -73,13 +73,13 @@
         </div>
 
         <div class="arrow prev" @click="prevImage">
-          <div class="arrow_text">
+          <div class="arrow_text px14 red">
             PREV
           </div>
         </div>
 
         <div class="arrow next" @click="nextImage">
-          <div class="arrow_text">
+          <div class="arrow_text px14 red">
             NEXT
           </div>
         </div>
@@ -94,22 +94,22 @@
           <!-- immagine -->
           <img src="img/h3-img-1.jpg" alt="">
           <!-- occhio che appare in hover -->
-          <i class="far fa-eye"></i>
+          <i class="far fa-eye px20 white"></i>
         </div>
 
         <div class="news">
           <img src="img/h3-img-2.jpg" alt="">
-          <i class="far fa-eye"></i>
+          <i class="far fa-eye px20 white"></i>
         </div>
 
         <div class="news">
           <img src="img/h3-img-3.jpg" alt="">
-          <i class="far fa-eye"></i>
+          <i class="far fa-eye px20 white"></i>
         </div>
 
         <div class="news">
           <img src="img/h3-img-4.jpg" alt="">
-          <i class="far fa-eye"></i>
+          <i class="far fa-eye px20 white"></i>
         </div>
 
       </section>
@@ -118,23 +118,23 @@
       <section class="testimonials">
 
         <!-- citazione -->
-        <i class="fas fa-quote-left"></i>
-        <div class="quote">{{quotes[quoteIndex].quote}}</div>
-        <div class="journal">{{quotes[quoteIndex].journal}}</div>
+        <i class="fas fa-quote-left px50 gold"></i>
+        <div class="quote px20 bold">{{quotes[quoteIndex].quote}}</div>
+        <div class="journal px12 red">{{quotes[quoteIndex].journal}}</div>
 
         <!-- pallini carousel -->
         <div class="dots">
-          <i v-for="(quote, index) in quotes" class="fas fa-circle" :class="{active: index === quoteIndex}" @click="selectQuote(index)"></i>
+          <i v-for="(quote, index) in quotes" class="fas fa-circle px10 lightgrey" :class="{gold: index === quoteIndex}" @click="selectQuote(index)"></i>
         </div>
 
         <!-- frecce carousel -->
         <div class="arrow prev" @click="prevQuote">
-          <div class="arrow_text">
+          <div class="arrow_text px14 red">
             PREV
           </div>
         </div>
         <div class="arrow next" @click="nextQuote">
-          <div class="arrow_text">
+          <div class="arrow_text px14 red">
             NEXT
           </div>
         </div>
@@ -156,31 +156,31 @@
         <div class="half right">
 
           <div>
-            <div class="title">SPECIALS*</div>
-            <div class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesent ut.</div>
+            <div class="title px30 bold">SPECIALS*</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesent ut.</div>
           </div>
 
-          <div class="combo">
-            <div class="price">$10</div>
+          <div class="combo px20">
+            <div class="price red bold">$10</div>
             <div class="right-column">
-              <div class="name">COMBO PICCOLO</div>
-              <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesent ut aliquam dui.</div>
+              <div class="bold">COMBO PICCOLO</div>
+              <div class="description px12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesent ut aliquam dui.</div>
             </div>
           </div>
 
-          <div class="combo">
-            <div class="price">$20</div>
+          <div class="combo px20">
+            <div class="price red bold">$20</div>
             <div class="right-column">
-              <div class="name">COMBO MEZZO</div>
-              <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesent ut aliquam dui.</div>
+              <div class="bold">COMBO MEZZO</div>
+              <div class="description px12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesent ut aliquam dui.</div>
             </div>
           </div>
 
-          <div class="combo">
-            <div class="price">$30</div>
+          <div class="combo px20">
+            <div class="price red bold">$30</div>
             <div class="right-column">
-              <div class="name">COMBO GRANDE</div>
-              <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesent ut aliquam dui.</div>
+              <div class="bold">COMBO GRANDE</div>
+              <div class="description px12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesent ut aliquam dui.</div>
             </div>
           </div>
 
@@ -203,7 +203,7 @@
         <div class="bg middle left"></div>
 
         <div class="bg middle center">
-          <div class="slogan">GO AHEAD AND BUILD YOUR OWN PIZZA WE WON'T JUDGE!</div>
+          <div class="slogan px40 bold white">GO AHEAD AND BUILD YOUR OWN PIZZA WE WON'T JUDGE!</div>
         </div>
 
         <div class="bg middle right">
@@ -227,8 +227,8 @@
           <!-- foto -->
           <img src="img/h1-team-1a.jpg" alt="">
           <!-- informazioni che appaiono in hover -->
-          <div class="curriculum">
-            <div class="name">MARK GIACOMELLI</div>
+          <div class="curriculum white">
+            <div class="px20 bold">MARK GIACOMELLI</div>
             <div class="job">Kitchen Porter</div>
             <div class="social">
               <i class="fab fa-instagram"></i>
@@ -241,8 +241,8 @@
         <div class="employee">
           <img src="img/h1-team-2a.jpg" alt="">
           <!-- informazioni che appaiono in hover -->
-          <div class="curriculum">
-            <div class="name">JASMINE TRUSSARDI</div>
+          <div class="curriculum white">
+            <div class="px20 bold">JASMINE TRUSSARDI</div>
             <div class="job">Kitchen Porter</div>
             <div class="social">
               <i class="fab fa-instagram"></i>
@@ -255,8 +255,8 @@
         <div class="employee">
           <img src="img/h1-team-4a.jpg" alt="">
           <!-- informazioni che appaiono in hover -->
-          <div class="curriculum">
-            <div class="name">FRANK BAILEY</div>
+          <div class="curriculum white">
+            <div class="px20 bold">FRANK BAILEY</div>
             <div class="job">Kitchen Porter</div>
             <div class="social">
               <i class="fab fa-instagram"></i>
@@ -269,8 +269,8 @@
         <div class="employee">
           <img src="img/h1-team-3a.jpg" alt="">
           <!-- informazioni che appaiono in hover -->
-          <div class="curriculum">
-            <div class="name">SOPHIA BRIDGES</div>
+          <div class="curriculum white">
+            <div class="px20 bold">SOPHIA BRIDGES</div>
             <div class="job">Kitchen Porter</div>
             <div class="social">
               <i class="fab fa-instagram"></i>
@@ -299,9 +299,9 @@
 
         <!-- parte superiore del menu -->
         <div class="menu_top">
-          <div class="choose">CHOSE YOUR FLAVOR</div>
-          <div class="title">THE BEST PIZZA MENU IN TOWN</div>
-          <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut blandit arcu in pretium molestie. Interdum et malusuada fames ac.</div>
+          <div class="px12 red">CHOSE YOUR FLAVOR</div>
+          <div class="title px30 bold">THE BEST PIZZA MENU IN TOWN</div>
+          <div class="description px14">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut blandit arcu in pretium molestie. Interdum et malusuada fames ac.</div>
 
           <!-- simbolo pizza -->
           <img class="slice circle grey" src="svg/svg-4.svg" alt="">
@@ -311,44 +311,44 @@
         <div class="menu_bottom">
 
           <!-- pizze con varie informazioni -->
-          <div class="pizza">
+          <div class="pizza px14 bold">
             <img src="img/h3-product-img-1a.png" alt="">
-            <div class="name">BISMARCK</div>
-            <span class="discount">$45.00</span>
-            <span class="price">$30.00</span>
+            <div class="gold">BISMARCK</div>
+            <span class="grey">$45.00</span>
+            <span class="red">$30.00</span>
           </div>
 
-          <div class="pizza">
+          <div class="pizza px14 bold">
             <img src="img/h3-product-img-2a.png" alt="">
-            <div class="name">FIORI DI ZUCCA</div>
-            <span class="price">$7.00 - $50.00</span>
+            <div class="gold">FIORI DI ZUCCA</div>
+            <span class="red">$7.00 - $50.00</span>
           </div>
 
-          <div class="pizza">
+          <div class="pizza px14 bold">
             <img src="img/h3-product-img-6a.png" alt="">
-            <div class="name">VALDOSTANA</div>
-            <span class="price">$55.00</span>
+            <div class="gold">VALDOSTANA</div>
+            <span class="red">$55.00</span>
 
             <!-- simbolo sold in alto a destra -->
             <div class="sold">SOLD</div>
           </div>
 
-          <div class="pizza">
+          <div class="pizza px14 bold">
             <img src="img/h3-product-img-4a.png" alt="">
-            <div class="name">PIZZA TARTUFATA</div>
-            <span class="price">$45.00</span>
+            <div class="gold">PIZZA TARTUFATA</div>
+            <span class="red">$45.00</span>
           </div>
 
-          <div class="pizza">
+          <div class="pizza px14 bold">
             <img src="img/h3-product-img-5a.png" alt="">
-            <div class="name">FRANCESCANA</div>
-            <span class="price">$25.00</span>
+            <div class="gold">FRANCESCANA</div>
+            <span class="red">$25.00</span>
           </div>
 
-          <div class="pizza">
+          <div class="pizza px14 bold">
             <img src="img/h3-product-img-3a.png" alt="">
-            <div class="name">CAMPAGNOLA</div>
-            <span class="price">$50.00 - $95.00</span>
+            <div class="gold">CAMPAGNOLA</div>
+            <span class="red">$50.00 - $95.00</span>
           </div>
 
           <!-- simbolo in basso a destra -->
@@ -366,19 +366,19 @@
         <!-- date a sinistra -->
         <div class="half left">
 
-          <div class="subtitle">MADE WITH LOVE</div>
-          <div class="title">DELISH PIZZA DEALS</div>
+          <div class="subtitle px12 red">MADE WITH LOVE</div>
+          <div class="px30 bold white">DELISH PIZZA DEALS</div>
 
           <div class="event">
 
             <div class="date">
-              <div class="day">02</div>
-              <div class="month">NOV</div>
+              <div class="px40 bold red">02</div>
+              <div class="month 20px bold white">NOV</div>
             </div>
 
             <div class="place">
-              <div class="name">TRADITIONAL NEAPOLITAN PIES IN KYOTO PIZZA MERCATO</div>
-              <div class="address">
+              <div class="px20 bold white">TRADITIONAL NEAPOLITAN PIES IN KYOTO PIZZA MERCATO</div>
+              <div class="px12 red">
                 <i class="fas fa-map-marker-alt"></i>
                 <span>204 E. Pizzetta Tommaso</span>
               </div>
@@ -389,13 +389,13 @@
           <div class="event">
 
             <div class="date">
-              <div class="day">03</div>
-              <div class="month">NOV</div>
+              <div class="px40 bold red">03</div>
+              <div class="month 20px bold white">NOV</div>
             </div>
 
             <div class="place">
-              <div class="name">TERRAZZA PATIO DINING SPACE OPENING THIS WEEKEND</div>
-              <div class="address">
+              <div class="px20 bold white">TERRAZZA PATIO DINING SPACE OPENING THIS WEEKEND</div>
+              <div class="px12 red">
                 <i class="fas fa-map-marker-alt"></i>
                 <span>204 E. Pizzetta Tommaso</span>
               </div>
@@ -406,13 +406,13 @@
           <div class="event">
 
             <div class="date">
-              <div class="day">05</div>
-              <div class="month">NOV</div>
+              <div class="px40 bold red">05</div>
+              <div class="month 20px bold white">NOV</div>
             </div>
 
             <div class="place">
-              <div class="name">SIENNA PRIVATE DINING ROOM WITH STÉPHANE BRUNN</div>
-              <div class="address">
+              <div class="px20 bold white">SIENNA PRIVATE DINING ROOM WITH STÉPHANE BRUNN</div>
+              <div class="px12 red">
                 <i class="fas fa-map-marker-alt"></i>
                 <span>204 E. Pizzetta Tommaso</span>
               </div>
@@ -458,34 +458,34 @@
           <div class="divisor">
             <div class="box">
               <input placeholder="1 Person">
-              <i class="fas fa-user-friends"></i>
+              <i class="fas fa-user-friends px14 gold"></i>
             </div>
-            <div class="conjunction">FOR</div>
+            <div class="conjunction px14 bold white">FOR</div>
           </div>
 
           <div class="divisor">
             <div class="box">
               <input placeholder="11/29/2020">
-              <i class="far fa-calendar"></i>
+              <i class="far fa-calendar px14 gold"></i>
             </div>
-            <div class="conjunction">AT</div>
+            <div class="conjunction px14 bold white">AT</div>
           </div>
 
           <div class="divisor">
             <div class="box">
               <input placeholder="7:00 pm">
-              <i class="far fa-clock"></i>
+              <i class="far fa-clock px14 gold"></i>
             </div>
           </div>
 
           <div class="divisor">
-            <button>BOOK A TABLE</button>
+            <button class="px12 white">BOOK A TABLE</button>
           </div>
 
         </div>
 
         <div class="line">
-          <div class="credits">*Powered by OpenTable</div>
+          <div class="credits px14 white">*Powered by OpenTable</div>
         </div>
 
       </section>
@@ -500,31 +500,31 @@
           <div class="row">
             <!-- colonna con gli indirizzi dei ristoranti -->
             <div class="column">
-              <div class="title">{{restaurants.name}}</div>
+              <div class="bold px14 gold">{{restaurants.name}}</div>
               <div v-for="place in restaurants.list">
-                <div class="address margin">{{place.address}}</div>
-                <div class="address">{{place.city}}</div>
-                <div class="address">{{place.phone}}</div>
+                <div class="px12 grey margin">{{place.address}}</div>
+                <div class="px12 grey">{{place.city}}</div>
+                <div class="px12 grey">{{place.phone}}</div>
               </div>
             </div>
 
             <!-- colonna con gli orari di apertura -->
             <div class="column">
-              <div class="title">{{openingHours.name}}</div>
+              <div class="bold px14 gold">{{openingHours.name}}</div>
               <div v-for="working in openingHours.list">
-                <div class="day gold margin">
+                <div class="px12 bold gold margin">
                   {{working.day}}
-                  <span v-if="working.asterisk" class="asterisk">*</span>
+                  <span v-if="working.asterisk" class="red">*</span>
                 </div>
-                <div class="day" :class="working.color">{{working.opening}}</div>
+                <div class="px12" :class="working.color">{{working.opening}}</div>
               </div>
-              <span class="day gold">{{socials.name}}</span>
-              <i v-for="social in socials.list" :class="social"></i>
+              <span class="px12 bold gold">{{socials.name}}</span>
+              <i v-for="social in socials.list" :class="social" class="px12 white"></i>
             </div>
 
             <!-- colonna con lo slogan aziendale -->
             <div class="column">
-              <div class="slogan">{{motto}}</div>
+              <div class="px20 bold white">{{motto}}</div>
             </div>
           </div>
 
@@ -532,7 +532,7 @@
           <div class="row">
 
             <!-- credits -->
-            <div class="credits">
+            <div class="px12">
               <span class="gold" v-html="credits.firstPart"></span>
               <span class="green">{{credits.secondPart}}</span>
             </div>

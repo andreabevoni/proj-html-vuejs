@@ -111,19 +111,19 @@ var app = new Vue({
         {
           day: 'TUESDAY UNTIL FRIDAY',
           opening: '9:00 - 22:00',
-          color: 'white',
+          color: 'grey',
           asterisk: false
         },
         {
           day: 'SATURDAY',
           opening: 'Saturday 11am to midnight',
-          color: 'white',
+          color: 'grey',
           asterisk: true
         },
         {
           day: 'SUNDAY',
           opening: '9:00 - 22:00',
-          color: 'white',
+          color: 'grey',
           asterisk: false
         }
       ]

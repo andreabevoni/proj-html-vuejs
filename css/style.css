@@ -201,9 +201,11 @@ header .jumbotron img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #D2401E;
+  background-color: #FFFFFF;
   /* background a puntini */
-  background-image: radial-gradient(#FFA500 20%, transparent 20%);
+  background-image: radial-gradient(#FFA500 20%, transparent 20%),
+      radial-gradient(#FFA500 20%, transparent 20%);
+  background-position: 0 0, 5px 5px;
   background-size: 10px 10px;
 }
 
@@ -211,9 +213,13 @@ header .jumbotron img {
   width: 100%;
 }
 
-.newsfeed .news .eye {
-  width: 80px;
+.newsfeed .news .fa-eye {
+  padding: 30px;
+  font-size: 20px;
   display: none;
+  border-radius: 50%;
+  color: #FFFFFF;
+  background-color: #D2401E;
 }
 
 /* regole in hover */
@@ -221,12 +227,8 @@ header .jumbotron img {
   display: none;
 }
 
-.newsfeed .news:hover .eye {
+.newsfeed .news:hover .fa-eye {
   display: block;
-}
-
-.newsfeed .news .eye:hover {
-  cursor: pointer;
 }
 
 /* REGOLE TESTIMONIAL */
@@ -437,7 +439,9 @@ header .jumbotron img {
   align-items: center;
   background-color: #FFFFFF;
   /* background a puntini */
-  background-image: radial-gradient(#FFA500 20%, transparent 20%);
+  background-image: radial-gradient(#FFA500 20%, transparent 20%),
+      radial-gradient(#FFA500 20%, transparent 20%);
+  background-position: 0 0, 5px 5px;
   background-size: 10px 10px;
 }
 

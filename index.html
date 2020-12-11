@@ -21,19 +21,18 @@
 
           <!-- pulsante ordina online -->
           <div class="box left">
-            <span v-for="(link, index) in headerLinks">
-              <a class="white_text button" v-if="index == 0" href="#">
-                {{link}}
-              </a>
-            </span>
+            <a class="white_text button" :href="headerLinks[0].link">
+              {{headerLinks[0].name}}
+            </a>
           </div>
 
           <!-- link alla sinistra del logo -->
           <div class="box left">
             <span v-for="(link, index) in headerLinks">
-              <a class="white_text" v-if="index >= 1 && index < 4" href="#">
-                <img class="symbol" v-if="index == 1" src="svg/svg-0.svg">
-                {{link}}
+              <!-- stampo solo Home, Pages e Menu -->
+              <a class="white_text" v-if="index >= 1 && index < 4" :href="link.link">
+                <img class="symbol" v-if="link.symbol" :src="link.symbol">
+                {{link.name}}
               </a>
             </span>
           </div>
@@ -44,8 +43,10 @@
           <!-- link alla destra del logo -->
           <div class="box right">
             <span v-for="(link, index) in headerLinks">
-              <a class="white_text" v-if="index >= 4 && index < 7" href="#">
-                {{link}}
+              <!-- stampo solo Event, Blog e Landing -->
+              <a class="white_text" v-if="index >= 4 && index < 7" :href="link.link">
+                <img class="symbol" v-if="link.symbol" :src="link.symbol">
+                {{link.name}}
               </a>
             </span>
           </div>
@@ -53,13 +54,13 @@
           <!-- link in alto a destra (cart e search) -->
           <div class="box right">
             <span v-for="(link, index) in headerLinks">
-              <a class="white_text" v-if="index >= 7" href="#">
-                <span class="position" v-if="index == 7">
-                  <img class="symbol bike" src="svg/svg-1.svg">
-                  <div class="backpack">0</div>
+              <a class="white_text" v-if="index >= 7" :href="link.link">
+                <span class="position" v-if="link.symbol == 'svg/svg-1.svg'">
+                  <img class="symbol bike" :src="link.symbol">
+                  <div class="backpack">{{cart}}</div>
                 </span>
-                <i class="fas fa-search symbol" v-else-if="index == 8"></i>
-                {{link}}
+                <i v-else :class="link.symbol"></i>
+                {{link.name}}
               </a>
             </span>
           </div>
@@ -93,22 +94,22 @@
           <!-- immagine -->
           <img src="img/h3-img-1.jpg" alt="">
           <!-- occhio che appare in hover -->
-          <img class="eye" src="svg/svg-2.svg" alt="">
+          <i class="far fa-eye"></i>
         </div>
 
         <div class="news">
           <img src="img/h3-img-2.jpg" alt="">
-          <img class="eye" src="svg/svg-2.svg" alt="">
+          <i class="far fa-eye"></i>
         </div>
 
         <div class="news">
           <img src="img/h3-img-3.jpg" alt="">
-          <img class="eye" src="svg/svg-2.svg" alt="">
+          <i class="far fa-eye"></i>
         </div>
 
         <div class="news">
           <img src="img/h3-img-4.jpg" alt="">
-          <img class="eye" src="svg/svg-2.svg" alt="">
+          <i class="far fa-eye"></i>
         </div>
 
       </section>

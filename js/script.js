@@ -2,11 +2,62 @@
 var app = new Vue({
   el: "#root",
   data: {
+    // indirizzo del logo stampato in header ed in footer
     logo: "img/h5-logo-divided-header.png",
-    headerLinks: ["ORDER ONLINE", "HOME", "PAGES", "MENU", "EVENT", "BLOG", "LANDING", "CART", "SEARCH"],
+    // lista di data da stampare nell'header
+    headerLinks: [
+      {
+        name: "ORDER ONLINE",
+        link: "#",
+        symbol: ''
+      },
+      {
+        name: "HOME",
+        link: "#",
+        symbol: 'svg/svg-0.svg'
+      },
+      {
+        name: "PAGES",
+        link: "#",
+        symbol: ''
+      },
+      {
+        name: "MENU",
+        link: "#",
+        symbol: ''
+      },
+      {
+        name: "EVENT",
+        link: "#",
+        symbol: ''
+      },
+      {
+        name: "BLOG",
+        link: "#",
+        symbol: ''
+      },
+      {
+        name: "LANDING",
+        link: "#",
+        symbol: ''
+      },
+      {
+        name: "CART",
+        link: "#",
+        symbol: 'svg/svg-1.svg'
+      },
+      {
+        name: "SEARCH",
+        link: "#",
+        symbol: 'fas fa-search symbol'
+      }
+    ],
+    cart: 0,
+    // data per il funzionamento del carousel nel jumbotron
     jumboIndex: 0,
     jumboImages: ["img/h3-rev-img-2.png", "img/h3-rev-img-4.png", "img/h3-rev-img-6.png"],
     jumboBgs: ["firstbg", "secondbg", "thirdbg"],
+    // data per il funzionamento del carousel nella sezione quote
     quoteIndex: 0,
     quotes: [
       {
@@ -22,6 +73,7 @@ var app = new Vue({
         quote: '"PINEAPPLE PIZZA IS A SIN AGAINST HUMANITY, PLEASE NEVER EAT IN THIS PLACE IF YOU ARE ITALIAN"'
       }
     ],
+    // lista di data da stampare nel footer
     restaurants: {
       name: 'FIND OUR RESTAURANTS',
       list: [

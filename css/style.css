@@ -91,9 +91,21 @@ header {
   height: 600px;
   position: relative;
   background-color: #1B1B1B;
-  background-image: url('../img/h3-rev-img-5.png');
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/* sfondo cangiante in base al carousel  */
+header.firstbg {
+  background-image: url('../img/h3-rev-img-1.png');
+}
+
+header.secondbg {
+  background-image: url('../img/h3-rev-img-3.png');
+}
+
+header.thirdbg {
+  background-image: url('../img/h3-rev-img-5.png');
 }
 
 header .link_row {
@@ -252,12 +264,17 @@ header .jumbotron img {
 }
 
 .testimonials .fa-circle {
+  margin: 0 3px;
   font-size: 8px;
   color: #E4E4D4;
 }
 
 .testimonials .fa-circle.active {
   color: #B7903C;
+}
+
+.testimonials .fa-circle:hover {
+  cursor: pointer;
 }
 
 /* REGOLE OFFERS */

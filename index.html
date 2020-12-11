@@ -14,7 +14,7 @@
     <div id="root">
 
       <!-- header con i vari link e con un jumbotron (sembra un carousel ma senza pallini in basso)-->
-      <header>
+      <header :class="jumboBgs[jumboIndex]">
 
         <!-- riga contenitore dei link -->
         <div class="link_row">
@@ -68,16 +68,16 @@
 
         <!-- contenitore immagine -->
         <div class="jumbotron">
-          <img src="img/h3-rev-img-2.png" alt="">
+          <img :src="jumboImages[jumboIndex]" alt="">
         </div>
 
-        <div class="arrow prev">
+        <div class="arrow prev" @click="prevImage">
           <div class="arrow_text">
             PREV
           </div>
         </div>
 
-        <div class="arrow next">
+        <div class="arrow next" @click="nextImage">
           <div class="arrow_text">
             NEXT
           </div>
@@ -113,28 +113,26 @@
 
       </section>
 
-      <!-- carousel con recensioni di riviste -->
+      <!-- carousel con citazioni di giornali -->
       <section class="testimonials">
 
-        <!-- dichiarazione del testimonial -->
+        <!-- citazione -->
         <i class="fas fa-quote-left"></i>
-        <div class="quote">"FORGET THE TRENDY PIZZA SHOPS, THIS HIDDEN SPOT MAKES THE BEST NEW YORK-STYLE PIZZA SLICE IN NAPLES"</div>
-        <div class="journal">WASHINGTON POST 2018</div>
+        <div class="quote">{{quotes[quoteIndex].quote}}</div>
+        <div class="journal">{{quotes[quoteIndex].journal}}</div>
 
         <!-- pallini carousel -->
         <div class="dots">
-          <i class="fas fa-circle active"></i>
-          <i class="fas fa-circle"></i>
-          <i class="fas fa-circle"></i>
+          <i v-for="(quote, index) in quotes" class="fas fa-circle" :class="{active: index === quoteIndex}" @click="selectQuote(index)"></i>
         </div>
 
         <!-- frecce carousel -->
-        <div class="arrow prev">
+        <div class="arrow prev" @click="prevQuote">
           <div class="arrow_text">
             PREV
           </div>
         </div>
-        <div class="arrow next">
+        <div class="arrow next" @click="nextQuote">
           <div class="arrow_text">
             NEXT
           </div>

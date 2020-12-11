@@ -246,7 +246,7 @@ header .jumbotron img {
 }
 
 .newsfeed .news {
-  width: calc((1600px - 30px) / 4);
+  width: calc((100% - 30px) / 4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -455,7 +455,7 @@ header .jumbotron img {
 }
 
 .team .employee {
-  width: calc(1600px / 4);
+  width: calc(100% / 4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -472,8 +472,8 @@ header .jumbotron img {
 }
 
 .team .employee .curriculum {
-  height: 340px;
-  width: 340px;
+  height: calc(100% - 60px);
+  width: calc(100% - 60px);
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -793,4 +793,12 @@ footer .right {
   background-image: url(../img/footer-img-1.jpg);
   background-size: cover;
   background-position: center;
+}
+
+/* RESPONSIVENESS PER DESKTOP PICCOLI */
+
+@media all and (max-width: 1599px) {
+  #root {
+    width: 1200px;
+  }
 }
